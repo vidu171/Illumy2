@@ -1,29 +1,21 @@
-package com.example.illumy.illumy;
+package com.example.illumy.illumy_home;
 
-import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.example.illumy.illumy.database.profiledb_helper;
-import com.example.illumy.illumy.profiles.profile_adapter;
-import com.example.illumy.illumy.profiles.profile_class;
+import com.example.illumy.illumy_home.database.profiledb_helper;
+import com.example.illumy.illumy_home.profiles.profile_adapter;
+import com.example.illumy.illumy_home.profiles.profile_class;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,14 +62,7 @@ public class ring_profile_list extends AppCompatActivity {
                 showdialog(profile);
             }
         });
-        Button bb = (Button) findViewById(R.id.button2);
-        bb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                profiledb_helper hel = new profiledb_helper(ring_profile_list.this);
-                hel.updatedb();
-            }
-        });
+
     }
     public class task extends AsyncTask<Void,Void,List<profile_class>>{
 

@@ -1,20 +1,17 @@
-package com.example.illumy.illumy;
+package com.example.illumy.illumy_home.recievers;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.media.AudioManager;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.illumy.illumy.database.profiledb_helper;
-import com.example.illumy.illumy.profiles.profile_class;
+import com.example.illumy.illumy_home.database.profiledb_helper;
+import com.example.illumy.illumy_home.services.fabview_service;
+import com.example.illumy.illumy_home.profiles.profile_class;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -25,18 +22,20 @@ import static java.util.Calendar.AM;
  * Created by vidu on 26/4/17.
  */
 
-public class alarm_reciever extends BroadcastReceiver {
+public class alarm_receiver extends BroadcastReceiver {
     String ALARM_ACTION_NAME = "com.illumy.action.alarm";
     String ALARM_ACTION_NAME1 = "com.illumy.action.silent_1";
     String ALARM_ACTION_NAME2 = "com.illumy.action.silent_2";
-    String getMode = new String();
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        Intent service_intent = new Intent(context, fabview_service.class);
+        context.startService(service_intent);
         if(ALARM_ACTION_NAME1.equals(intent.getAction())){
            // get a second before current time
             long t = System.currentTimeMillis();
             t = t - 40000;
+
 
             // get a time just less then the current time but greater than time t
             profiledb_helper dbhelper = new profiledb_helper(context);

@@ -1,4 +1,4 @@
-package com.example.illumy.illumy;
+package com.example.illumy.illumy_home;
 
 import android.content.Intent;
 import android.os.Bundle;

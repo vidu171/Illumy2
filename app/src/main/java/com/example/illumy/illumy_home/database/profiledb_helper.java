@@ -1,4 +1,4 @@
-package com.example.illumy.illumy.database;
+package com.example.illumy.illumy_home.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,12 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.illumy.illumy.profiles.profile_class;
+import com.example.illumy.illumy_home.profiles.profile_class;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by vidu on 28/4/17.

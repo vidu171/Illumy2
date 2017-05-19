@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.illumy.illumy">
-
+    package="com.example.illumy.illumy_home">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/dark_theme">
-        <receiver android:name=".alarm_reciever">
+        <service
+            android:name="com.example.illumy.illumy_home.services.fabview_service"
+            android:label="service" />
+        <service android:name=".services.copy_text_service"/>
+        <receiver android:name="com.example.illumy.illumy_home.recievers.alarm_receiver">
             <intent-filter>
-                <action android:name="com.illumy.action.alarm"></action>
-                <action android:name="com.illumy.action.silent_1"></action>
-                <action android:name="com.illumy.action.silent_2"></action>
+                <action android:name="com.illumy.action.alarm" />
+                <action android:name="com.illumy.action.silent_1" />
+                <action android:name="com.illumy.action.silent_2" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".complete_reciever" />
+        <receiver android:name="com.example.illumy.illumy_home.recievers.complete_receiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.illumy.action.float_repeat" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".recievers.copy_text_reciever">
+            <intent-filter>
+                <action android:name="com.example.illumy.EMAIL_SEND"/>
+            </intent-filter>
+        </receiver>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.illumy.illumy_home.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/dark_theme">
             <intent-filter>
@@ -28,9 +45,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ring_profile_list"/>
-        <activity android:name=".schedule_activity"/>
-        <activity android:name=".sc_ring_activity"
+        <activity android:name="com.example.illumy.illumy_home.float_activity"/>
+        <activity android:name="com.example.illumy.illumy_home.ring_profile_list"/>
+        <activity android:name="com.example.illumy.illumy_home.schedule_activity"/>
+        <activity android:name="com.example.illumy.illumy_home.sc_ring_activity"
             android:theme="@style/profile_theme"/>
     </application>
 

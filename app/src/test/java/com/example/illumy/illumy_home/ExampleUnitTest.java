@@ -1,4 +1,4 @@
-package com.example.illumy.illumy;
+package com.example.illumy.illumy_home;
 
 import org.junit.Test;
 

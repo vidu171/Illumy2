@@ -1,21 +1,17 @@
-package com.example.illumy.illumy.profiles;
+package com.example.illumy.illumy_home.profiles;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.illumy.illumy.R;
+import com.example.illumy.illumy_home.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -66,7 +62,7 @@ public class profile_adapter extends ArrayAdapter<profile_class> {
             final_display.append("PM");
         }
 
-        final_display.append(" "+cal.get(Calendar.DATE));
+        //final_display.append(" "+cal.get(Calendar.DATE));
 
         holder.time.setText(final_display.toString());
         //Log.w("thiss",String.valueOf(currentObject.unix_time));

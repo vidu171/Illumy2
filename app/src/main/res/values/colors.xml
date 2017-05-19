@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">@android:color/holo_blue_dark</color>
-    <color name="primary_material_dark">#212121</color>
-    <color name="background_material_dark">#303030</color>
+    <color name="primary_material_dark">#0a0a0a</color>
+    <color name="background_material_dark">#141414</color>
 
 </resources>

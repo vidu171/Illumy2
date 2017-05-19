@@ -1,7 +1,6 @@
-package com.example.illumy.illumy;
+package com.example.illumy.illumy_home;
 
 import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import java.util.Calendar;
@@ -9,10 +8,8 @@ import java.util.Calendar;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -22,13 +19,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.illumy.illumy.database.profiledb_helper;
-import com.example.illumy.illumy.profiles.profile_class;
+import com.example.illumy.illumy_home.database.profiledb_helper;
+import com.example.illumy.illumy_home.profiles.profile_class;
 
 import me.tankery.lib.circularseekbar.CircularSeekBar;
-
-import static java.util.Calendar.AM;
-import static java.util.Calendar.PM;
 
 /**
  * Created by vidu on 26/4/17.
@@ -38,7 +32,7 @@ public class sc_ring_activity extends AppCompatActivity {
 
     int hr_temp = 0;
     int min_temp = 0;
-    String Mode = new String();
+    String Mode = "";
     boolean AM_bool = true;
     String ALARM_ACTION_NAME = "com.illumy.action.alarm";
 
