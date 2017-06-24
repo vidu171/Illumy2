@@ -9,6 +9,9 @@ If the user does not interact with the phone for 10 mins the app will automatica
 # Set phone to ring automatically
 Illumy sets the phone to ring or silent as preffered by the user.
 Now set your phone to silent at a perticular time.
+![Alt text](https://github.com/vidu171/Illumy2/blob/master/Screenshot_2017-05-01-21-13-05.png "Alarm setter")  ![Alt text](https://github.com/vidu171/Illumy2/blob/master/Screenshot_2017-05-01-21-12-59.png "Alarm lists")
+
+
 
 # Email the copied text directly
 Many times we recieve important links through mobile messaging services or we are browsing from our mobile browsers.
